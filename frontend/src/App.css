@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --accent-rgb: 0, 212, 170;
+  --accent: #00d4aa;
+  --accent-soft-bg: rgba(0, 212, 170, 0.1);
+  --accent-border: rgba(0, 212, 170, 0.3);
+  --focus-ring: rgba(0, 212, 170, 0.2);
+  --body-bg: #080e14;
+  --app-bg: #090f17;
+  --text: #cdd9e5;
+  --text-strong: #e2e8f0;
+  --text-muted: #4a6278;
+  --text-soft: #5a7080;
+  --border: #1a2535;
+  --border-soft: #1e2d3d;
+  --border-subtle: #0d1620;
+  --panel: rgba(0, 0, 0, 0.2);
+  --panel-strong: rgba(0, 0, 0, 0.25);
+  --panel-soft: rgba(255, 255, 255, 0.03);
+  --panel-softer: rgba(255, 255, 255, 0.02);
+  --header-bg: rgba(0, 0, 0, 0.4);
+  --header-soft: rgba(0, 0, 0, 0.1);
+  --sidebar-bg: rgba(0, 0, 0, 0.2);
+  --right-bg: rgba(0, 0, 0, 0.15);
+  --upload-idle-bg: rgba(255, 255, 255, 0.02);
+  --upload-active-bg: rgba(0, 212, 170, 0.06);
+  --empty-text: #1e2d3d;
+  --message-bot-bg: rgba(255, 255, 255, 0.04);
+  --message-user-bg: rgba(99, 102, 241, 0.12);
+  --message-user-border: rgba(99, 102, 241, 0.25);
+  --chunk-content-bg: rgba(0, 0, 0, 0.25);
+  --badge-idle-bg: rgba(255, 255, 255, 0.04);
+  --scrollbar: #1e2d3d;
+  --input-placeholder: #6b7f92;
+  --disabled-bg: #1a2535;
+}
+
+:root[data-theme="light"] {
+  --accent-rgb: 26, 109, 224;
+  --accent: #1a6de0;
+  --accent-soft-bg: #eef4ff;
+  --accent-border: rgba(26, 109, 224, 0.3);
+  --focus-ring: rgba(26, 109, 224, 0.2);
+  --body-bg: #eef2f7;
+  --app-bg: #ffffff;
+  --text: #1c2b3a;
+  --text-strong: #1c2b3a;
+  --text-muted: #4a6080;
+  --text-soft: #8aa0b8;
+  --border: #e2e8f0;
+  --border-soft: #cbd5e1;
+  --border-subtle: #e2e8f0;
+  --panel: #ffffff;
+  --panel-strong: #ffffff;
+  --panel-soft: #ffffff;
+  --panel-softer: #f7f9fc;
+  --header-bg: #ffffff;
+  --header-soft: #ffffff;
+  --sidebar-bg: #f7f9fc;
+  --right-bg: #f7f9fc;
+  --upload-idle-bg: #ffffff;
+  --upload-active-bg: #eef4ff;
+  --empty-text: #8aa0b8;
+  --message-bot-bg: #f7f9fc;
+  --message-user-bg: #eef4ff;
+  --message-user-border: #e2e8f0;
+  --chunk-content-bg: #f1f5f9;
+  --badge-idle-bg: #f1f5f9;
+  --scrollbar: #cbd5e1;
+  --input-placeholder: #8aa0b8;
+  --disabled-bg: #f1f5f9;
+  --stat-doc: #1a6de0;
+  --stat-chunk: #0e9e79;
+  --stat-qa: #d4860a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  background: var(--body-bg);
+  color: var(--text);
+  font-family: 'Space Mono', monospace;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea::placeholder {
+  color: var(--input-placeholder);
+}
+
+.query-input-wrap {
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.query-input-wrap:focus-within {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px var(--focus-ring);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar);
+  border-radius: 3px;
+}
+
+@keyframes pulse {
+  0%,
+  100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes glow {
+  0%,
+  100% { box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.1); }
+  50% { box-shadow: 0 0 40px rgba(var(--accent-rgb), 0.25); }
+}

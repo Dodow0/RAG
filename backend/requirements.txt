@@ -1,0 +1,26 @@
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9
+
+# PDF 解析
+pypdf>=4.2.0
+
+# 文本切分
+langchain-text-splitters>=0.2.0
+
+# Embedding & Generation（统一用 OpenAI SDK 对接任意兼容接口）
+openai>=1.30.0
+
+# 向量数据库
+chromadb>=0.5.0
+
+# apikey env
+python-dotenv
+
+# SQLite
+SQLModel
+aiosqlite
+
+# Task queue
+redis
+rq
