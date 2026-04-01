@@ -30,3 +30,7 @@ dist-ssr
 #backend pyc.
 __pycache__/
 *.pyc
+
+# 向量数据库
+chroma_db/
+*.sqlite3
