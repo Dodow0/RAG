@@ -27,10 +27,13 @@ dist-ssr
 *.sln
 *.sw?
 
-#backend pyc.
+# backend pyc.
 __pycache__/
 *.pyc
 
 # 向量数据库
 chroma_db/
 *.sqlite3
+
+# 用户上传文件
+backend/uploads/
